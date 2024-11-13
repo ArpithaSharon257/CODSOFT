@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arpitha Sharon - Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+  
+    <header id="home" class="header" >
+        <div class="profile-image">
+            <img src="profile.png" alt="Arpitha Sharon's Profile Photo">
+        </div>
+        <div class="intro">
+            <h1>Arpitha Sharon</h1>
+            <p>MCA Student | Web Development Enthusiast | Java Developer</p>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I am an MCA student with a strong passion for web development and Java programming. I enjoy creating interactive and responsive websites, and I am constantly learning new technologies to enhance my skills.</p>
+        
+        <h3>Skills</h3>
+        <div class="skills">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Java</span>
+            <span class="skill">React</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">MySQL</span>
+        </div>
+    </section>
+
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-cards">
+            <div class="project-card">
+                <h3>Donation Management System</h3>
+                <p>A web application that manages donations for various causes, with roles for donors, recipients, and admins.</p>
+            </div>
+            <div class="project-card">
+                <h3>Inventory Management System</h3>
+                <p>A MERN stack application to manage inventory with full CRUD functionality.</p>
+            </div>
+            <div class="project-card">
+                <h3>AI Image Generator</h3>
+                <p>Web app that generates images based on user prompts using an API.</p>
+            </div>
+            <div class="project-card">
+                <h3>Group Chat Application</h3>
+                <p>Java-based group chat application using sockets for real-time communication.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</body>
+</html>
