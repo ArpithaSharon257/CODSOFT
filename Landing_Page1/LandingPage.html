@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        /* Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navigation Styles */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            z-index: 10;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #c38989;
+        }
+
+        .section {
+            width: 100%;
+            height: 100vh;
+            padding: 60px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .section1 {
+            background-image: url('./images/background.webp');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+        }
+
+        .section1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .hero-content h1 {
+            font-size: 60px;
+            color: #c38989;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            margin-top: 15px;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 50px;
+            gap: 2rem;
+        }
+
+        .feature {
+            width: 300px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+        }
+
+        .feature img {
+            width: 80%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+     
+        .testimonials {
+            display: flex;
+            flex-direction: column;
+            background-color: #f5f5f5;
+            padding: 0px 20px;
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-size: 32px;
+            margin-top: 200px;
+            color: #333;text-align: center;
+        }
+
+        .testimonial {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+       
+            
+        }
+
+        .testimonial img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .testimonial p {
+            display: inline-block;
+            vertical-align: middle;
+            max-width: 80%;
+            font-style: italic;
+            color: #555;
+        }
+
+        /* Call-to-action */
+        .call-to-action {
+            background-color: #333;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .call-to-action h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .call-to-action form {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .call-to-action input,
+        .call-to-action textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .call-to-action input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .call-to-action input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#section1">Home</a></li>
+            <li><a href="#section2">Features</a></li>
+            <li><a href="#section3">Testimonials</a></li>
+            <li><a href="#section4">Contact</a></li>
+        </ul>
+    </nav>
+
+ 
+    <div class="section section1" id="section1">
+        <div class="hero-content">
+            <h1>Welcome to Shuttle World</h1>
+            <p>Explore a Range of Shuttle Rackets Tailored to Every Playing Style. Find the ideal match for your game and elevate your skills with a racket designed to suit your unique style.</p>
+        </div>
+        <div class="hero-image">
+            <img src="./images/Racket.png" alt="Shuttle Racket Image">
+        </div>
+    </div>
+
+    <div class="section" id="section2">
+        <div class="features">
+            <div class="feature">
+                <img src="./images/power.png" alt="Power Racket">
+                <h2>Power Racket</h2>
+                <p>For powerful smashes and enhanced weight distribution. Perfect for advanced players looking to dominate.</p>
+            </div>
+            <div class="feature">
+                <img src="./images/control.png" alt="Control Racket">
+                <h2>Control Racket</h2>
+                <p>Achieve accuracy with a balanced, lightweight frame. Ideal for players focused on strategic placement.</p>
+            </div>
+            <div class="feature">
+                <img src="./images/speed.png" alt="Speed Racket">
+                <h2>Speed Racket</h2>
+                <p>Boost your agility with an aerodynamic design. Great for players who thrive on quick reflexes.</p>
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="section testimonials" id="section3">
+        <h2>What Our Players Say</h2>
+        <div class="testimonial">
+            <img src="./images/player1.webp" alt="Player 1">
+            <p>"The Power Racket has completely transformed my game! My smashes have never been stronger."</p>
+        </div>
+        <div class="testimonial">
+            <img src="./images/player2.webp" alt="Player 2">
+            <p>"I love the control and precision I get with the Control Racket. Perfect for my playing style!"</p>
+        </div>
+    </div>
+
+ 
+    <div class="section call-to-action" id="section4">
+        <h2>Ready to Elevate Your Game?</h2>
+        <form action="mailto:arpithasharon257@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name">
+            <input type="email" name="email" placeholder="Your Email">
+            <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+
+</body>
+
+</html>
